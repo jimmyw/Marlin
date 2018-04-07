@@ -132,7 +132,7 @@
 #define SDSS               31
 
 #if ENABLED(IS_MELZI)
-  #define LED_PIN          27
+  #define LED_PIN           -1
 #elif MB(STB_11)
   #define LCD_BACKLIGHT_PIN 17   // LCD backlight LED
 #endif
@@ -159,14 +159,14 @@
 
     #if ENABLED(U8GLIB_ST7920) // SPI GLCD 12864 ST7920 ( like [www.digole.com] ) For Melzi V2.0
 
-      #if ENABLED(IS_MELZI)
-        #define LCD_PINS_RS     30   // CS chip select /SS chip slave select
-        #define LCD_PINS_ENABLE 29   // SID (MOSI)
-        #define LCD_PINS_D4     17   // SCK (CLK) clock
+      #if ENABLED(IS_MELZI) // Melzi board
+        #define LCD_PINS_RS     17
+        #define LCD_PINS_ENABLE 16
+        #define LCD_PINS_D4     11
         // Pin 27 is taken by LED_PIN, but Melzi LED does nothing with
         // Marlin so this can be used for BEEPER_PIN. You can use this pin
         // with M42 instead of BEEPER_PIN.
-        #define BEEPER_PIN      27
+        // #define BEEPER_PIN      27
       #else        // Sanguinololu >=1.3
         #define LCD_PINS_RS      4
         #define LCD_PINS_ENABLE 17
@@ -217,8 +217,8 @@
 
   #endif // !DOGLCD
 
-  #define BTN_EN1               11
-  #define BTN_EN2               10
+  #define BTN_EN1               30
+  #define BTN_EN2               29
 
   #if ENABLED(LCD_I2C_PANELOLU2)
 
@@ -235,8 +235,8 @@
     #define LCD_PINS_ENABLE     16
     #define LCD_PINS_D4         11
     #define BTN_ENC             28
-    #define BTN_EN1             29
-    #define BTN_EN2             30
+    #define BTN_EN1             30
+    #define BTN_EN2             29
 
     #ifndef ST7920_DELAY_1
       #define ST7920_DELAY_1 DELAY_NS(0)
