@@ -132,7 +132,7 @@
 #define SDSS               31
 
 #if ENABLED(IS_MELZI)
-  #define LED_PIN          27
+  #define LED_PIN          -1
 #elif MB(STB_11)
   #define LCD_BACKLIGHT_PIN 17 // LCD backlight LED
 #endif
@@ -160,9 +160,9 @@
     #if ENABLED(U8GLIB_ST7920) // SPI GLCD 12864 ST7920 ( like [www.digole.com] ) For Melzi V2.0
 
       #if ENABLED(IS_MELZI)
-        #define LCD_PINS_RS     30 // CS chip select /SS chip slave select
-        #define LCD_PINS_ENABLE 29 // SID (MOSI)
-        #define LCD_PINS_D4     17 // SCK (CLK) clock
+        #define LCD_PINS_RS     17 // CS chip select /SS chip slave select
+        #define LCD_PINS_ENABLE 16 // SID (MOSI)
+        #define LCD_PINS_D4     11 // SCK (CLK) clock
         // Pin 27 is taken by LED_PIN, but Melzi LED does nothing with
         // Marlin so this can be used for BEEPER_PIN. You can use this pin
         // with M42 instead of BEEPER_PIN.
@@ -212,23 +212,18 @@
 
   #endif // !DOGLCD
 
-  #define BTN_EN1               11
-  #define BTN_EN2               10
+  #define BTN_EN1               30
+  #define BTN_EN2               29
 
   #if ENABLED(LCD_I2C_PANELOLU2)
 
     #if ENABLED(IS_MELZI)
-      #define BTN_ENC           29
-      #define LCD_SDSS          30 // Panelolu2 SD card reader rather than the Melzi
-    #else
       #define BTN_ENC           30
+      #define LCD_SDSS          29 // Panelolu2 SD card reader rather than the Melzi
+    #else
+      #define BTN_ENC           28
     #endif
-
-  #elif ENABLED(LCD_FOR_MELZI)
-
-    #define LCD_PINS_RS         17
-    #define LCD_PINS_ENABLE     16
-    #define LCD_PINS_D4         11
+  #else  // !Panelolu2
     #define BTN_ENC             28
     #define BTN_EN1             29
     #define BTN_EN2             30
