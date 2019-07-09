@@ -189,8 +189,9 @@
 #if HAS_SPI_LCD
   #define BEEPER_PIN       P1_30   // (37) not 5V tolerant
   #define BTN_ENC          P0_28   // (58) open-drain
+  //#warning HAS_SPI_LCD
 
-  #if ENABLED(CR10_STOCKDISPLAY)
+  #if ENABLED(CR10_STOCKDISPLAY) || ENABLED(LCD_FOR_MELZI)
     #define LCD_PINS_RS    P1_22
 
     #define BTN_EN1        P1_18
@@ -198,7 +199,7 @@
 
     #define LCD_PINS_ENABLE P1_23
     #define LCD_PINS_D4    P1_21
-
+    //#warning ENABLE_LCD_FOR_MELZI
   #else
     #define LCD_PINS_RS    P1_19
 
