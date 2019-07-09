@@ -92,11 +92,11 @@
   #define E0_CS_PIN        P1_08
 #endif
 
-#define E1_STEP_PIN        P0_01
-#define E1_DIR_PIN         P0_00
-#define E1_ENABLE_PIN      P0_10
-#ifndef E1_CS_PIN
-  #define E1_CS_PIN        P1_01
+#define Z2_STEP_PIN        P0_01
+#define Z2_DIR_PIN         P0_00
+#define Z2_ENABLE_PIN      P0_10
+#ifndef Z2_CS_PIN
+  #define Z2_CS_PIN        P1_01
 #endif
 
 //
@@ -168,12 +168,14 @@
 // Heaters / Fans
 //
 #define HEATER_0_PIN       P2_07
-#if HOTENDS == 1
-  #define FAN1_PIN         P2_04
-#else
-  #define HEATER_1_PIN     P2_04
-#endif
-#define FAN_PIN            P2_03
+//#if HOTENDS == 1
+//  #define FAN1_PIN         P2_04
+//#else
+//  #define HEATER_1_PIN     P2_04
+//#endif
+
+// I switched the fan to HE1
+#define FAN_PIN            P2_04
 #define HEATER_BED_PIN     P2_05
 
 /**
