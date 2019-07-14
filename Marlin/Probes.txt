@@ -1,0 +1,20 @@
+BlTouch med cap
+Mean: 0.191750 Min: 0.105 Max: 0.327 Range: 0.222
+
+>>>M48 V2
+SENDING:M48 V2
+M48 Z-Probe Repeatability Test
+1 of 10: z: 0.085
+2 of 10: z: 0.162
+3 of 10: z: 0.200
+4 of 10: z: 0.327
+5 of 10: z: 0.020
+6 of 10: z: 0.080
+7 of 10: z: 0.377
+8 of 10: z: 0.167
+9 of 10: z: 0.242
+10 of 10: z: 0.165
+Finished!
+Mean: 0.182750 Min: 0.020 Max: 0.377 Range: 0.357
+Standard Deviation: 0.105026
+X:77.00 Y:106.00 Z:10.00 E:0.00 Count X:6160 Y:8480 Z:4000
