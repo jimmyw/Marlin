@@ -18,3 +18,15 @@ Finished!
 Mean: 0.182750 Min: 0.020 Max: 0.377 Range: 0.357
 Standard Deviation: 0.105026
 X:77.00 Y:106.00 Z:10.00 E:0.00 Count X:6160 Y:8480 Z:4000
+
+
+New cable:
+
+Finished!
+Mean: 0.125500 Min: 0.045 Max: 0.257 Range: 0.212
+Standard Deviation: 0.060568
+
+
+Decap
+Mean: 0.089750 Min: -0.045 Max: 0.317 Range: 0.362
+Standard Deviation: 0.125392
